@@ -1,8 +1,11 @@
 package com.mav;
 
-public class MeteoStation {
+import com.mav.model.ConsoleObserver;
+import com.mav.model.MeteoStation;
+
+public class Main {
     public static void main(String[] args) {
-        MeteoStationMountin stationMountin = new MeteoStationMountin();
+        MeteoStation stationMountin = new MeteoStation();
         stationMountin.addObserver(new ConsoleObserver());
         stationMountin.setMeasurements(-35, 770);
     }

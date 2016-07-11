@@ -1,9 +1,9 @@
-package com.mav;
+package com.mav.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MeteoStationMountin implements Observed {
+public class MeteoStation implements Observed {
 
     int temperature;
     int pressure;
@@ -30,7 +30,7 @@ public class MeteoStationMountin implements Observed {
     }
 
     public void notifyObservers() {
-        for(Observer observer: observers){
+        for (Observer observer : observers) {
             observer.handleEvent(temperature, pressure);
         }
     }
